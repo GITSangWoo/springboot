@@ -12,5 +12,9 @@ public interface TodoMapper {
 
     void insertEntity(String subject, String body, Boolean completed);
 
+    void deleteEntity(Integer id);
+
+    void updateEntity(TodoEntity todoEntity);
+
     // void insertEntity(TodoEntity todoEntity);
 }

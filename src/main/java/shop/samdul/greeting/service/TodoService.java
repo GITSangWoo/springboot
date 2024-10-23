@@ -31,9 +31,18 @@ public void insertEntity(String subject, String body, Boolean completed) {
 	//throw new UnsupportedOperationException("Unimplemented method 'insertEntity'");
 }
 
-	// public TodoEntity insertEntity(TodoEntity todoEntity) {
-	// 	return todoMapper.insertEntity(todoEntity);
-	// }
+public void updateById(int id, TodoEntity todoEntity) {
+	todoEntity.setId(id);
+	todoMapper.updateEntity(todoEntity);
+}
+
+public void deleteById(Integer id) {
+	todoMapper.deleteEntity(id);
+}
+
+
+
+
 }
 
     

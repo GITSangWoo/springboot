@@ -20,4 +20,20 @@
   		insert into ENCORE_TODO_TBL(subject,body,completed)
   		values(#{subject}, #{body}, #{completed})
 	</insert>
+
+	<update id="updateEntity">
+  		<!-- update ENCORE_TODO_TBL set
+    	subject = #{subject},
+    	body = #{body},
+    	completed = #{completed},
+  		where id = #{id} -->
+		UPDATE ENCORE_TODO_TBL
+		SET subject = #{subject}, body = #{body}, completed = #{completed}
+		WHERE id=#{id}
+	</update>
+
+	<delete id="deleteEntity">
+  		delete from ENCORE_TODO_TBL where id = #{id}
+	</delete>
+
 </mapper>
