@@ -24,6 +24,16 @@ public class TodoService {
   public TodoEntity findById(Integer id) {
     return todoMapper.findById(id);
   }
+
+public void insertEntity(String subject, String body, Boolean completed) {
+	todoMapper.insertEntity(subject, body, completed);
+	// }
+	//throw new UnsupportedOperationException("Unimplemented method 'insertEntity'");
+}
+
+	// public TodoEntity insertEntity(TodoEntity todoEntity) {
+	// 	return todoMapper.insertEntity(todoEntity);
+	// }
 }
 
     

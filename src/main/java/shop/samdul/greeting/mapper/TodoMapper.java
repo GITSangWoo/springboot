@@ -9,4 +9,8 @@ public interface TodoMapper {
     List<TodoEntity> findAll();
 
     TodoEntity findById(Integer id);
+
+    void insertEntity(String subject, String body, Boolean completed);
+
+    // void insertEntity(TodoEntity todoEntity);
 }

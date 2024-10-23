@@ -3,6 +3,8 @@ package shop.samdul.greeting.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import shop.samdul.greeting.service.TodoService;
@@ -30,8 +32,18 @@ public class TodoController{
 	}
 
 	//C - INSERT
+	@PostMapping("/todos")
+	public void insert(@RequestBody TodoEntity todoEntity){
+		todoService.insertEntity(todoEntity.getSubject(), todoEntity.getBody(), todoEntity.getCompleted());
+	}
 
 	//U - UPDATE
+	public void update(){
+		
+	}
 
-	//D - DELTE
+	//D - DELETE
+	public void delete(){
+		
+	}
 }
