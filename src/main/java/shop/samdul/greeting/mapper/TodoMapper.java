@@ -9,4 +9,6 @@ import shop.samdul.greeting.entity.TodoEntity;
 @Mapper
 public interface TodoMapper {
     List<TodoEntity> findAll();
+
+    TodoEntity selectbyId();
 }
