@@ -8,5 +8,5 @@ spring:
     username: todo_user
     password: todo_passwd
 
-mybastis:
+mybatis:
   mapper-locations: mappers/*.xml

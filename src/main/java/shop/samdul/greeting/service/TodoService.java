@@ -5,29 +5,27 @@ import org.springframework.stereotype.Service;
 
 import shop.samdul.greeting.entity.TodoEntity;
 import shop.samdul.greeting.mapper.TodoMapper;
+
 import java.util.List;
 
 @Service
-public class TodoService{
+public class TodoService {
 
-    @Autowired
-    TodoMapper todoMapper;
-    
-    public List<TodoEntity> getTodos(){
-            System.out.println("[service] findAll");
-            List<TodoEntity> todos = todoMapper.findAll();
-            System.out.println("[todos]:" + todos.size());
-            return todos;
-    }
+	@Autowired
+	TodoMapper todoMapper;
 
-    public TodoEntity findById(Integer id){
-            System.out.println("[service] findbyId");
-            TodoEntity r = todoMapper.selectbyId();
-            System.out.println("[service]: " + r.getId());
-            return r;
-    }
+	public List<TodoEntity> getTodos() {
+		System.out.println("[service] findAll");
+		List<TodoEntity> todos = todoMapper.findAll();
+		System.out.println("[todos]:" + todos.size());
+		return todos;
+	}
 
-    
-
-
+  public TodoEntity findById(Integer id) {
+    return todoMapper.findById(id);
+  }
 }
+
+    
+
+
